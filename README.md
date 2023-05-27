@@ -20,10 +20,10 @@ dependencies:
 
 If you encounter any problems feel free to open an issue. If you feel the library is
 missing a feature, please raise a ticket on Github and I'll look into it.
-Pull request are also welcome.# loaders
+Pull request are also welcome.# x_validation
 
 ## Installing
-Install the latest version from [pub](https://pub.dev/packages/flutter_active_loaders)
+Install the latest version from [pub](https://pub.dev/packages/x_validation)
 
 
 ```
