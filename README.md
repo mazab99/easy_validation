@@ -6,7 +6,7 @@ Custom widgets and components ready to use under your awesome projects!
 
 ```yaml
 dependencies:
-  flutter_active_loaders: ^<latest_version>
+  x_validation: ^<latest_version>
 ```
 
 
@@ -25,15 +25,5 @@ Pull request are also welcome.# loaders
 ## Installing
 Install the latest version from [pub](https://pub.dev/packages/flutter_active_loaders)
 
-## Usage
-Simple but powerful parameters
 
-```
-FlutterActiveLoader(
-    indicatorType: Indicator.ballPulse, 
-    colors: const [Colors.white],       
-    strokeWidth: 2,                  
-    backgroundColor: Colors.black,      
-    pathBackgroundColor: Colors.black   
-)
 ```
