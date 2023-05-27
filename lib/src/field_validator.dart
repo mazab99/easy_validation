@@ -14,7 +14,7 @@ class FieldValidator {
   final bool _displayMultipleMessages;
 
   /// Validates our field validators.
-  String? validate(String field) {
+  String? validate({required String field}) {
     String? message;
 
     Iterable<FieldValidatorCore> validatorList =

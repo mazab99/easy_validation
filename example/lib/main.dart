@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:x_validation/x_validation.dart';
 
 void main() => runApp(MyApp());
 
@@ -25,34 +26,33 @@ class HomeScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            // TextFormField(
-            //   autovalidateMode: AutovalidateMode.onUserInteraction,
-            //   validator: (text) => FieldValidator(
-            //     [
-            //       RequiredFieldValidator(
-            //         errorMessage: "Field required",
-            //       ),
-            //       LengthFieldValidator(
-            //         minLength: 4,
-            //         errorMessage: "Field needs at least 4 characters",
-            //       ),
-            //       LengthFieldValidator(
-            //         maxLength: 12,
-            //         errorMessage: "Field can have up to 12 characters",
-            //       ),
-            //       PatternFieldValidator(
-            //         r"(^[a-z])([a-z0-9-]*)([a-z0-9]$)",
-            //         errorMessage:
-            //             "Use only lowercase letters hyphens and numbers",
-            //       ),
-            //       ConditionFieldValidator(
-            //         (field) => field == "type this",
-            //         errorMessage: "You have to type type this",
-            //       ),
-            //     ],
-            //     field: text,
-            //   ).validate(),
-            // ),
+            TextFormField(
+              autovalidateMode: AutovalidateMode.onUserInteraction,
+              validator: (text) => FieldValidator(
+                [
+                  const RequiredFieldValidator(
+                    errorMessage: "Field required",
+                  ),
+                  const LengthFieldValidator(
+                    minLength: 4,
+                    errorMessage: "Field needs at least 4 characters",
+                  ),
+                  const LengthFieldValidator(
+                    maxLength: 12,
+                    errorMessage: "Field can have up to 12 characters",
+                  ),
+                  const PatternFieldValidator(
+                    r"(^[a-z])([a-z0-9-]*)([a-z0-9]$)",
+                    errorMessage:
+                        "Use only lowercase letters hyphens and numbers",
+                  ),
+                  ConditionFieldValidator(
+                    (field) => field == "type this",
+                    errorMessage: "You have to type type this",
+                  ),
+                ],
+              ).validate(field: text!),
+            ),
           ],
         ),
       ),

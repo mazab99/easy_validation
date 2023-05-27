@@ -12,7 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.5
-  x_validation: ^1.0.0
+  x_validation: ^3.2.0
 
 dev_dependencies:
   flutter_test:
