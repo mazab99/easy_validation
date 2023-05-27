@@ -1,7 +1,7 @@
-import 'package:form_validator/src/field_validator_core.dart';
+import 'package:x_validation/src/x_validation_field_validator_core.dart';
 
-class EmailFieldValidator extends FieldValidatorCore {
-  const EmailFieldValidator({required super.errorMessage});
+class XValidationEmailFieldValidator extends EasyFieldValidatorCore {
+  const XValidationEmailFieldValidator({required super.errorMessage});
 
   final Pattern _emailPattern =
       r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+";

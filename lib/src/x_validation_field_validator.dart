@@ -1,22 +1,22 @@
-import 'package:form_validator/src/field_validator_core.dart';
+import 'package:x_validation/src/x_validation_field_validator_core.dart';
 
-class FieldValidator {
-  const FieldValidator(
+class XValidationField {
+  const XValidationField(
     this._validators, {
     bool displayMultipleMessages = false,
   }) : _displayMultipleMessages = displayMultipleMessages;
 
-  final List<FieldValidatorCore> _validators;
+  final List<EasyFieldValidatorCore> _validators;
 
   final bool _displayMultipleMessages;
 
   String? validate(String field) {
     String? message;
 
-    Iterable<FieldValidatorCore> validatorList =
+    Iterable<EasyFieldValidatorCore> validatorList =
         _displayMultipleMessages ? _validators : _validators.reversed;
 
-    for (FieldValidatorCore validator in validatorList) {
+    for (EasyFieldValidatorCore validator in validatorList) {
       if (!validator.isValid(field)) {
         if (_displayMultipleMessages && message != null && message.isNotEmpty) {
           if (!message.contains(validator.errorMessage)) {

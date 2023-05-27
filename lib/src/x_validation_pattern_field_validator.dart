@@ -1,13 +1,13 @@
-import 'package:form_validator/src/field_validator_core.dart';
+import 'package:x_validation/src/x_validation_field_validator_core.dart';
 
-class PatternFieldValidator extends FieldValidatorCore {
+class EasyPatternFieldValidator extends EasyFieldValidatorCore {
   final Pattern _pattern;
 
   final bool _caseSensitive;
 
   final bool _inverse;
 
-  const PatternFieldValidator(
+  const EasyPatternFieldValidator(
     this._pattern, {
     required super.errorMessage,
     bool caseSensitive = true,

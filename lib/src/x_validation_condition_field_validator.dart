@@ -1,9 +1,9 @@
-import '../form_validator.dart';
+import '../x_validation.dart';
 
-class ConditionFieldValidator extends FieldValidatorCore {
+class XValidationConditionFieldValidator extends EasyFieldValidatorCore {
   final bool Function(String? field) condition;
 
-  const ConditionFieldValidator(
+  const XValidationConditionFieldValidator(
     this.condition, {
     required super.errorMessage,
   });

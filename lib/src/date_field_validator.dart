@@ -1,7 +1,7 @@
-import 'package:form_validator/src/field_validator_core.dart';
+import 'package:x_validation/src/x_validation_field_validator_core.dart';
 
-class DateFieldValidator extends FieldValidatorCore {
-  const DateFieldValidator({
+class EasyDateFieldValidator extends EasyFieldValidatorCore {
+  const EasyDateFieldValidator({
     required super.errorMessage,
     this.minDate,
     this.maxDate,

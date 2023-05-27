@@ -1,11 +1,11 @@
-import 'package:form_validator/src/field_validator_core.dart';
+import 'package:x_validation/src/x_validation_field_validator_core.dart';
 
-class LengthFieldValidator extends FieldValidatorCore {
+class EasyLengthFieldValidator extends EasyFieldValidatorCore {
   final int? minLength;
 
   final int? maxLength;
 
-  const LengthFieldValidator({
+  const EasyLengthFieldValidator({
     required super.errorMessage,
     this.minLength,
     this.maxLength,

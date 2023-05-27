@@ -1,11 +1,11 @@
-import 'package:form_validator/src/field_validator_core.dart';
+import 'package:x_validation/src/x_validation_field_validator_core.dart';
 
-class NumericFieldValidator extends FieldValidatorCore {
+class EasyNumericFieldValidator extends EasyFieldValidatorCore {
   final num? min;
 
   final num? max;
 
-  const NumericFieldValidator({
+  const EasyNumericFieldValidator({
     required super.errorMessage,
     this.min,
     this.max,

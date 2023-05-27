@@ -1,10 +1,10 @@
-import 'package:form_validator/src/field_validator_core.dart';
+import 'package:x_validation/src/x_validation_field_validator_core.dart';
 
-class ExactMatchFieldValidator extends FieldValidatorCore {
+class XValidationExactMatchFieldValidator extends EasyFieldValidatorCore {
   final String _text;
   final bool _caseSensitive;
 
-  const ExactMatchFieldValidator(
+  const XValidationExactMatchFieldValidator(
     this._text, {
     required super.errorMessage,
     bool caseSensitive = true,
