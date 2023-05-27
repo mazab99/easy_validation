@@ -1,14 +1,18 @@
-import 'package:x_validation/src/x_validation_field_validator_core.dart';
+import 'package:x_validation/src/field_validator_core.dart';
 
-class XValidationExactMatchFieldValidator extends EasyFieldValidatorCore {
-  final String _text;
-  final bool _caseSensitive;
-
-  const XValidationExactMatchFieldValidator(
+/// Validates if the field matches the text.
+class ExactMatchFieldValidator extends FieldValidatorCore {
+  const ExactMatchFieldValidator(
     this._text, {
     required super.errorMessage,
     bool caseSensitive = true,
   }) : _caseSensitive = caseSensitive;
+
+  /// Will validate based on this text.
+  final String _text;
+
+  /// The pattern we use to validate.
+  final bool _caseSensitive;
 
   @override
   bool isValid(String? field) {

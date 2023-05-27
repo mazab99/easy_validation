@@ -1,27 +1,28 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:x_validation/x_validation.dart';
 
+
 void main() {
   testWidgets(
     "Field Validator test",
-    (WidgetTester tester) async {
+        (WidgetTester tester) async {
       // Check if the field has text, is at least 4 and at most 12 characters
       // long, and matches our only lowercase letterse, hypens and numbers
       // regex
-      XValidationField testValidator = const XValidationField(
+      FieldValidator testValidator = const FieldValidator(
         [
-          EasyRequiredFieldValidator(
+          RequiredFieldValidator(
             errorMessage: "Field required",
           ),
-          EasyLengthFieldValidator(
+          LengthFieldValidator(
             errorMessage: "Field needs at least 4 characters",
             minLength: 4,
           ),
-          EasyLengthFieldValidator(
+          LengthFieldValidator(
             errorMessage: "Field can have up to 12 characters",
             maxLength: 12,
           ),
-          EasyPatternFieldValidator(
+          PatternFieldValidator(
             r"(^[a-z])([a-z0-9-]*)([a-z0-9]$)",
             errorMessage: "Use only lowercase letters hyphens and numbers",
           ),

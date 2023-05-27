@@ -1,5 +1,6 @@
-abstract class EasyFieldValidatorCore {
-  const EasyFieldValidatorCore({required this.errorMessage});
+/// Base class for any field validator.
+abstract class FieldValidatorCore {
+  const FieldValidatorCore({required this.errorMessage});
 
   /// This validator's error message.
   final String errorMessage;

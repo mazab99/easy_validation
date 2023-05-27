@@ -1,15 +1,18 @@
-import 'package:x_validation/src/x_validation_field_validator_core.dart';
+import 'package:x_validation/src/field_validator_core.dart';
 
-class EasyNumericFieldValidator extends EasyFieldValidatorCore {
-  final num? min;
-
-  final num? max;
-
-  const EasyNumericFieldValidator({
+/// Validates if the field is numeric and in the specified range.
+class NumericFieldValidator extends FieldValidatorCore {
+  const NumericFieldValidator({
     required super.errorMessage,
     this.min,
     this.max,
   });
+
+  /// The min value if set.
+  final num? min;
+
+  /// The max value if set.
+  final num? max;
 
   @override
   bool isValid(String? field) {

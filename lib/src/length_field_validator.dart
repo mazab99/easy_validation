@@ -1,24 +1,29 @@
-import 'package:x_validation/src/x_validation_field_validator_core.dart';
+import 'package:x_validation/src/field_validator_core.dart';
 
-class EasyLengthFieldValidator extends EasyFieldValidatorCore {
-  final int? minLength;
-
-  final int? maxLength;
-
-  const EasyLengthFieldValidator({
+/// Validates if the field if not empty.
+class LengthFieldValidator extends FieldValidatorCore {
+  const LengthFieldValidator({
     required super.errorMessage,
     this.minLength,
     this.maxLength,
   });
 
+  /// The min length if set.
+  final int? minLength;
+
+  /// The max length if set.
+  final int? maxLength;
+
   @override
   bool isValid(String? field) {
     if (field == null || field.isEmpty) return true;
 
+    // Check the min length
     if (minLength != null && field.length < minLength!) {
       return false;
     }
 
+    // Check the max length
     if (maxLength != null && field.length > maxLength!) {
       return false;
     }

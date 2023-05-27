@@ -1,19 +1,23 @@
-import 'package:x_validation/src/x_validation_field_validator_core.dart';
+import 'package:x_validation/src/field_validator_core.dart';
 
-class EasyPatternFieldValidator extends EasyFieldValidatorCore {
-  final Pattern _pattern;
-
-  final bool _caseSensitive;
-
-  final bool _inverse;
-
-  const EasyPatternFieldValidator(
+/// Validates if the field matches the pattern.
+class PatternFieldValidator extends FieldValidatorCore {
+  const PatternFieldValidator(
     this._pattern, {
     required super.errorMessage,
     bool caseSensitive = true,
     bool inverse = false,
   })  : _caseSensitive = caseSensitive,
         _inverse = inverse;
+
+  /// The pattern we use.
+  final Pattern _pattern;
+
+  /// If the match should be case sensitive.
+  final bool _caseSensitive;
+
+  /// If true we will validate true for no matches.
+  final bool _inverse;
 
   @override
   bool isValid(String? field) {
